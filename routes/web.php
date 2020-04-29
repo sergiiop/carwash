@@ -34,3 +34,27 @@ Route::post(
     'generator_builder/generate-from-file',
     '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@generateFromFile'
 )->name('io_generator_builder_generate_from_file');
+
+Route::resource('statusPeople', 'Status_PersonController');
+
+Route::resource('identificationTypes', 'identification_typeController');
+
+Route::resource('typePeople', 'type_personController');
+
+Route::resource('brands', 'brandsController');
+
+Route::resource('servicesStatuses', 'Services_StatusController');
+
+Route::resource('typeServices', 'type_servicesController');
+
+Route::resource('invoiceStatuses', 'Invoice_StatusController');
+
+Route::resource('people', 'peopleController');
+
+Route::resource('cars', 'carController');
+
+Route::resource('facturas', 'facturaController');
+
+Route::resource('services', 'servicesController');
+
+Route::resource('detalleFacturas', 'detalle_facturaController');
