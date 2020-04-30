@@ -6,36 +6,30 @@
 
 <!-- Person Id Field -->
 <div class="form-group">
-    {!! Form::label('person_id', 'Identificacion:') !!}
-    <p>{{ $factura->person-> Identification }}</p>
+    {!! Form::label('person_id', 'Identificacion:') !!} <p>{{ $factura->person-> Identification }}</p>
 </div>
 
 <!-- Car Id Field -->
 <div class="form-group">
-    {!! Form::label('car_id', 'Placa:') !!}
-    <p>{{ $factura->car->placa }}</p>
+    {!! Form::label('car_id', 'Placa:') !!} <p>{{ $factura->car->placa }}</p>
 </div>
 
 <!-- Status Id Field -->
 <div class="form-group">
-    {!! Form::label('status_id', 'Status:') !!}
-    <p>{{ $factura->status-> Status }}</p>
+    {!! Form::label('status_id', 'Status:') !!} <p>{{ $factura->status-> Status }}</p>
 </div>
 
 <!-- Observation Field -->
 <div class="form-group">
-    {!! Form::label('observation', 'Observation:') !!}
-    <p>{{ $factura->observation }}</p>
+    {!! Form::label('observation', 'Observation:') !!} <p>{{ $factura->observation }}</p>
 </div>
 
 <div class="form-group">
-    {!! Form::label('services_id', 'Service:') !!}
-    <p>{{ $factura->services->description }}</p>
+    {!! Form::label('services_id', 'Service:') !!} <p>{{ $factura->services->description }}</p>
 </div>
 
 <div class="form-group">
-    <td>Valor del servicio:</td>
-    <p>{{ $factura->services->price }}</p>
+    <td>Valor del servicio: <p>{{ $factura->services->price }}</p> </td>
 </div>
 
 <!-- Created At Field -->

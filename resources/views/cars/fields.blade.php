@@ -13,7 +13,7 @@
 <!-- Color Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('color', 'Color:') !!}
-    {!! Form::text('color', null, ['class' => 'form-control']) !!}
+    {!! Form::color('color', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Brand Id Field -->
