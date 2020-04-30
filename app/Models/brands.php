@@ -42,5 +42,8 @@ class brands extends Model
         
     ];
 
-    
+    public function carro()
+    {
+        return $this->hasMany('App\Models\cars');
+    }
 }

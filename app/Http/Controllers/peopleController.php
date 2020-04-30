@@ -8,6 +8,8 @@ use App\Repositories\peopleRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
+use App\Models\identification_type;
+use Illuminate\Support\Facades\DB;
 use Response;
 
 class peopleController extends AppBaseController
@@ -42,7 +44,9 @@ class peopleController extends AppBaseController
      */
     public function create()
     {
-        return view('people.create');
+        $TipoIdentificacion = identification_type::pluck('description','id');
+        $datos = ['tipo'=> $TipoIdentificacion];
+        return view('people.create')->with('datos',$datos);
     }
 
     /**
@@ -99,8 +103,10 @@ class peopleController extends AppBaseController
 
             return redirect(route('people.index'));
         }
+        $tp=identification_type::pluck('description', 'id');
+        $datos = ['people' => $people, 'tipo' => $tp];
 
-        return view('people.edit')->with('people', $people);
+        return view('people.edit')->with('datos', $datos);
     }
 
     /**

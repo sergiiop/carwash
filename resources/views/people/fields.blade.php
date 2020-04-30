@@ -19,19 +19,19 @@
 <!-- Type Id Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('type_id', 'Tipo de Identificacion:') !!}
-    {!! Form::text('type_id', null, ['class' => 'form-control']) !!}
+    {!! Form::select('type_id', $datos['tipo'], null, ['class' => 'form-control chosen-select']) !!}
 </div>
 
 <!-- Date Birth Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('date_birth', 'Date Birth:') !!}
-    {!! Form::text('date_birth', null, ['class' => 'form-control']) !!}
+    {!! Form::date('date_birth', null, ['class' => 'form-control date','required' => 'required']) !!}
 </div>
 
 <!-- Phone Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('phone', 'Phone:') !!}
-    {!! Form::text('phone', null, ['class' => 'form-control']) !!}
+    {!! Form::number('phone', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Direccion Field -->

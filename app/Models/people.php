@@ -60,5 +60,15 @@ class people extends Model
         
     ];
 
+    public function type()
+    {
+        return $this->belongsTo('App\Models\identification_type','type_id');
+    }
+
+    public function carro()
+    {
+        return $this->hasMany('App\Models\cars');
+    }
+
     
 }

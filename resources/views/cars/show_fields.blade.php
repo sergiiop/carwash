@@ -30,8 +30,8 @@
 
 <!-- Person Id Field -->
 <div class="form-group">
-    {!! Form::label('person_id', 'Person Id:') !!}
-    <p>{{ $car->person_id }}</p>
+    {!! Form::label('person_id', 'Propietario:') !!}
+    <p>{{ $datos['car'][0]->name }} {{ $datos['car'][0]->last_name }} {{ $datos['car'][0]->Identification }}</p>
 </div>
 
 <!-- Created At Field -->

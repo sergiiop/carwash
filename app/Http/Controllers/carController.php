@@ -6,6 +6,9 @@ use App\Http\Requests\CreatecarRequest;
 use App\Http\Requests\UpdatecarRequest;
 use App\Repositories\carRepository;
 use App\Http\Controllers\AppBaseController;
+use App\Models\brands;
+use App\Models\people;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Flash;
 use Response;
@@ -42,7 +45,10 @@ class carController extends AppBaseController
      */
     public function create()
     {
-        return view('cars.create');
+        $marca = brands::pluck('descripcion','id');
+        $personas = people::pluck('Identification','id');
+        $datos = ['personas' => $personas,'marca'=>$marca];
+        return view('cars.create')->with('datos',$datos);
     }
 
     /**
@@ -99,8 +105,12 @@ class carController extends AppBaseController
 
             return redirect(route('cars.index'));
         }
+        $bd=brands::pluck('descripcion', 'id');
+        $pr=people::pluck('Identification','id');
 
-        return view('cars.edit')->with('car', $car);
+        $datos = ['car' => $car, 'personas' => $pr, 'marca' => $bd];
+
+        return view('cars.edit')->with('datos', $datos);
     }
 
     /**

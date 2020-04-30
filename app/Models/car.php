@@ -54,5 +54,13 @@ class car extends Model
         
     ];
 
-    
+    public function marca()
+    {
+        return $this->belongsTo('App\Models\brands','brand_id');
+    }
+
+    public function persona()
+    {
+        return $this->belongsTo('App\Models\people','person_id');
+    }
 }

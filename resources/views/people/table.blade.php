@@ -18,7 +18,7 @@
                 <td>{{ $people->name }}</td>
             <td>{{ $people->last_name }}</td>
             <td>{{ $people->Identification }}</td>
-            <td>{{ $people->type_id }}</td>
+            <td>{{ $people->type->description }}</td>
             <td>{{ $people->date_birth }}</td>
             <td>{{ $people->phone }}</td>
             <td>{{ $people->direccion }}</td>

@@ -18,7 +18,7 @@
                               <strong>Edit Car</strong>
                           </div>
                           <div class="card-body">
-                              {!! Form::model($car, ['route' => ['cars.update', $car->id], 'method' => 'patch']) !!}
+                              {!! Form::model($datos['car'], ['route' => ['cars.update', $datos['car']->id], 'method' => 'patch']) !!}
 
                               @include('cars.fields')
 

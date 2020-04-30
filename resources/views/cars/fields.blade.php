@@ -18,14 +18,14 @@
 
 <!-- Brand Id Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('brand_id', 'Brand Id:') !!}
-    {!! Form::text('brand_id', null, ['class' => 'form-control']) !!}
+    {!! Form::label('brand_id', 'Marca:') !!}
+    {!! Form::select('brand_id',$datos['marca'], null, ['class' => 'form-control chosen-select']) !!}
 </div>
 
 <!-- Person Id Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('person_id', 'Person Id:') !!}
-    {!! Form::text('person_id', null, ['class' => 'form-control']) !!}
+    {!! Form::label('person_id', 'Documento del Propietario:') !!}
+    {!! Form::select('person_id',$datos['personas'], null, ['class' => 'form-control chosen-select']) !!}
 </div>
 
 <!-- Submit Field -->

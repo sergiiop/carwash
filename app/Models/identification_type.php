@@ -41,5 +41,10 @@ class identification_type extends Model
         
     ];
 
+    public function people()
+    {
+        return $this->hasMany('App\Models\people');
+    }
+
     
 }

@@ -18,7 +18,7 @@
                               <strong>Edit People</strong>
                           </div>
                           <div class="card-body">
-                              {!! Form::model($people, ['route' => ['people.update', $people->id], 'method' => 'patch']) !!}
+                              {!! Form::model($datos['people'], ['route' => ['people.update', $datos['people']->id], 'method' => 'patch']) !!}
 
                               @include('people.fields')
 
