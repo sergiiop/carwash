@@ -5,8 +5,8 @@
                 <th>Placa</th>
         <th>Modelo</th>
         <th>Color</th>
-        <th>Brand Id</th>
-        <th>Person Id</th>
+        <th>Marca</th>
+        <th>Dueño</th>
                 <th colspan="3">Action</th>
             </tr>
         </thead>
@@ -16,8 +16,8 @@
                 <td>{{ $car->placa }}</td>
             <td>{{ $car->modelo }}</td>
             <td>{{ $car->color }}</td>
-            <td>{{ $car->brand_id }}</td>
-            <td>{{ $car->person_id }}</td>
+            <td>{{ $car->marca->descripcion }}</td>
+            <td>{{ $car->persona->Identification }}</td>
                 <td>
                     {!! Form::open(['route' => ['cars.destroy', $car->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
