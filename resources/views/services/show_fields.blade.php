@@ -34,3 +34,8 @@
     <p>{{ $services->updated_at }}</p>
 </div>
 
+<!-- price Field -->
+<div class="form-group">
+    {!! Form::label('price', 'Price:') !!}
+    <p>{{ $services->price }}</p>
+</div>

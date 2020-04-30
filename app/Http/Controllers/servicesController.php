@@ -7,6 +7,8 @@ use App\Http\Requests\UpdateservicesRequest;
 use App\Repositories\servicesRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
+use App\Models\type_services;
+use App\Models\Services_Status;
 use Flash;
 use Response;
 
@@ -42,7 +44,11 @@ class servicesController extends AppBaseController
      */
     public function create()
     {
-        return view('services.create');
+        $tipo_servicio=type_services::pluck('description','id');
+        $estados=Services_Status::pluck('status','id');
+        $datos = ['tipos' => $tipo_servicio, 'estados' => $estados];
+
+        return view('services.create')->with('datos', $datos);
     }
 
     /**
@@ -100,7 +106,12 @@ class servicesController extends AppBaseController
             return redirect(route('services.index'));
         }
 
-        return view('services.edit')->with('services', $services);
+        $ts=type_services::pluck('description','id');
+        $es=Services_Status::pluck('status','id');
+
+        $datos = ['tipos' => $ts, 'estados' => $es, 'services' => $services];
+
+        return view('services.edit')->with('datos',$datos);
     }
 
     /**

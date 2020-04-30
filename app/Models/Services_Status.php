@@ -41,6 +41,9 @@ class Services_Status extends Model
     public static $rules = [
         
     ];
-
+    public function services()
+    {
+        return $this->hasMany('App\Models\services');
+    }
     
 }

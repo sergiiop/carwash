@@ -18,7 +18,7 @@
                               <strong>Edit Services</strong>
                           </div>
                           <div class="card-body">
-                              {!! Form::model($services, ['route' => ['services.update', $services->id], 'method' => 'patch']) !!}
+                              {!! Form::model($datos['services'], ['route' => ['services.update', $datos['services']->id], 'method' => 'patch']) !!}
 
                               @include('services.fields')
 

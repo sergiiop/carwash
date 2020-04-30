@@ -24,7 +24,8 @@ class services extends Model
     public $fillable = [
         'description',
         'type_services_id',
-        'status_id'
+        'status_id',
+        'price'
     ];
 
     /**
@@ -36,7 +37,8 @@ class services extends Model
         'id' => 'integer',
         'description' => 'string',
         'type_services_id' => 'integer',
-        'status_id' => 'integer'
+        'status_id' => 'integer',
+        'price' => 'float'
     ];
 
     /**
@@ -48,5 +50,14 @@ class services extends Model
         
     ];
 
+    public function tiposervice()
+    {
+        return $this->belongsTo('App\Models\type_services','type_services_id');
+    }
+
+    public function status()
+    {
+        return $this->belongsTo('App\Models\Services_Status','status_id');
+    }
     
 }

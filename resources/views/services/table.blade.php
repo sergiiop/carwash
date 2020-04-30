@@ -3,8 +3,9 @@
         <thead>
             <tr>
                 <th>Description</th>
-        <th>Type Services Id</th>
-        <th>Status Id</th>
+        <th>Type Service</th>
+        <th>Status</th>
+        <th>Precio</th>
                 <th colspan="3">Action</th>
             </tr>
         </thead>
@@ -14,6 +15,7 @@
                 <td>{{ $services->description }}</td>
             <td>{{ $services->type_services_id }}</td>
             <td>{{ $services->status_id }}</td>
+            <td>{{ $services->price }}</td>
                 <td>
                     {!! Form::open(['route' => ['services.destroy', $services->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
