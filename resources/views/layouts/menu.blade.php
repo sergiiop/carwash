@@ -64,9 +64,3 @@
         <span>Services</span>
     </a>
 </li>
-<li class="nav-item {{ Request::is('detalleFacturas*') ? 'active' : '' }}">
-    <a class="nav-link" href="{{ route('detalleFacturas.index') }}">
-        <i class="nav-icon icon-cursor"></i>
-        <span>Detalle Facturas</span>
-    </a>
-</li>

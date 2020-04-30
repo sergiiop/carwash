@@ -8,7 +8,7 @@ use App\Repositories\BaseRepository;
 /**
  * Class detalle_facturaRepository
  * @package App\Repositories
- * @version April 29, 2020, 8:54 pm UTC
+ * @version April 30, 2020, 4:51 am UTC
 */
 
 class detalle_facturaRepository extends BaseRepository
@@ -18,7 +18,7 @@ class detalle_facturaRepository extends BaseRepository
      */
     protected $fieldSearchable = [
         'factura_id',
-        'services_id',
+        'services_id'
     ];
 
     /**

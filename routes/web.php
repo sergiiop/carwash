@@ -56,5 +56,3 @@ Route::resource('cars', 'carController');
 Route::resource('facturas', 'facturaController');
 
 Route::resource('services', 'servicesController');
-
-Route::resource('detalleFacturas', 'detalle_facturaController');

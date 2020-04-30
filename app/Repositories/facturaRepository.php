@@ -20,7 +20,8 @@ class facturaRepository extends BaseRepository
         'person_id',
         'car_id',
         'status_id',
-        'observation'
+        'observation',
+        'services_id'
     ];
 
     /**

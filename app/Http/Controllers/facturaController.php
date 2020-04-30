@@ -9,8 +9,10 @@ use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use App\Models\car;
 use App\Models\people;
+use App\Models\services;
 use App\Models\Invoice_Status;
 use Flash;
+use Illuminate\Support\Facades\DB;
 use Response;
 
 class facturaController extends AppBaseController
@@ -48,7 +50,8 @@ class facturaController extends AppBaseController
         $persona = people::pluck('Identification','id');
         $car = car::pluck('placa','id');
         $status = Invoice_Status::pluck('Status','id');
-        $datos = ['persona' => $persona,'car'=>$car,'status'=>$status];
+        $services = services::pluck('description','id');
+        $datos = ['persona' => $persona,'car'=>$car,'status'=>$status,'services'=>$services];
         return view('facturas.create')->with('datos', $datos);
     }
 
@@ -86,7 +89,7 @@ class facturaController extends AppBaseController
 
             return redirect(route('facturas.index'));
         }
-        
+
         return view('facturas.show')->with('factura', $factura);
     }
 
@@ -109,7 +112,8 @@ class facturaController extends AppBaseController
         $person = people::pluck('Identification','id');
         $c = car::pluck('placa','id');
         $sts = Invoice_Status::pluck('Status','id');
-        $datos = ['persona' => $person,'car'=>$c,'status'=>$sts, 'factura' => $factura];
+        $sers = services::pluck('description','id');
+        $datos = ['persona' => $person,'car'=>$c,'status'=>$sts, 'factura' => $factura,'services' => $sers];
 
         return view('facturas.edit')->with('datos', $datos);
     }
@@ -164,4 +168,5 @@ class facturaController extends AppBaseController
 
         return redirect(route('facturas.index'));
     }
+
 }

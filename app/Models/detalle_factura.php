@@ -7,12 +7,10 @@ use Eloquent as Model;
 /**
  * Class detalle_factura
  * @package App\Models
- * @version April 29, 2020, 8:54 pm UTC
+ * @version April 30, 2020, 4:51 am UTC
  *
  * @property integer $factura_id
  * @property integer $services_id
- * @property integer $cantidad
- * @property integer $valor
  */
 class detalle_factura extends Model
 {
@@ -24,7 +22,7 @@ class detalle_factura extends Model
 
     public $fillable = [
         'factura_id',
-        'services_id',
+        'services_id'
     ];
 
     /**
@@ -35,7 +33,7 @@ class detalle_factura extends Model
     protected $casts = [
         'id' => 'integer',
         'factura_id' => 'integer',
-        'services_id' => 'integer',
+        'services_id' => 'integer'
     ];
 
     /**
@@ -51,9 +49,11 @@ class detalle_factura extends Model
     {
         return $this->belongsTo('App\Models\factura','factura_id');
     }
-    public function services()
+
+    public function service()
     {
         return $this->belongsTo('App\Models\services','services_id');
     }
 
+    
 }

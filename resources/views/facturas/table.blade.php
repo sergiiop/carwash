@@ -6,6 +6,7 @@
         <th>Matricula</th>
         <th>Status</th>
         <th>Observation</th>
+        <th>Services</th>
                 <th colspan="3">Action</th>
             </tr>
         </thead>
@@ -16,6 +17,7 @@
             <td>{{ $factura->car->placa }}</td>
             <td>{{ $factura->status-> Status}}</td>
             <td>{{ $factura->observation }}</td>
+            <td>{{ $factura->services-> description}}</td>
                 <td>
                     {!! Form::open(['route' => ['facturas.destroy', $factura->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

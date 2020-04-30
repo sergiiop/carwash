@@ -26,7 +26,8 @@ class factura extends Model
         'person_id',
         'car_id',
         'status_id',
-        'observation'
+        'observation',
+        'services_id'
     ];
 
     /**
@@ -39,7 +40,8 @@ class factura extends Model
         'person_id' => 'integer',
         'car_id' => 'integer',
         'status_id' => 'integer',
-        'observation' => 'string'
+        'observation' => 'string',
+        'services_id' => 'integer'
     ];
 
     /**
@@ -64,8 +66,9 @@ class factura extends Model
     {
         return $this->belongsTo('App\Models\Invoice_Status','status_id');
     }
-    public function detalle()
+    
+    public function services()
     {
-        return $this->hasMany('App\Models\detalle_factura');
+        return $this->belongsTo('App\Models\services','services_id');
     }
 }

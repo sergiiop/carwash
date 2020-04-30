@@ -28,6 +28,16 @@
     <p>{{ $factura->observation }}</p>
 </div>
 
+<div class="form-group">
+    {!! Form::label('services_id', 'Service:') !!}
+    <p>{{ $factura->services->description }}</p>
+</div>
+
+<div class="form-group">
+    <td>Valor del servicio:</td>
+    <p>{{ $factura->services->price }}</p>
+</div>
+
 <!-- Created At Field -->
 <div class="form-group">
     {!! Form::label('created_at', 'Created At:') !!}
@@ -39,4 +49,5 @@
     {!! Form::label('updated_at', 'Updated At:') !!}
     <p>{{ $factura->updated_at }}</p>
 </div>
+
 

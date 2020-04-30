@@ -7,8 +7,8 @@ use App\Http\Requests\Updatedetalle_facturaRequest;
 use App\Repositories\detalle_facturaRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
-use App\Models\services;
 use App\Models\factura;
+use App\Models\services;
 use Flash;
 use Response;
 
@@ -44,10 +44,10 @@ class detalle_facturaController extends AppBaseController
      */
     public function create()
     {
-        $factura = factura::pluck('id');
-        $service = services::pluck('description','id');
-        $datos = ['factura' => $factura,'service'=>$service];
-        return view('detalle_facturas.create')->with('datos', $datos);
+        $factura=factura::pluck('id');
+        $service=services::pluck('description','id');
+        $datos=['factura'=>$factura,'service'=>$service];
+        return view('detalle_facturas.create')->with('datos',$datos);
     }
 
     /**

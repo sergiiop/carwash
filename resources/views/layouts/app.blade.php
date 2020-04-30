@@ -40,7 +40,6 @@
         <li class="nav-item d-md-down-none">
             <a class="nav-link" href="#">
                 <i class="icon-bell"></i>
-                <span class="badge badge-pill badge-danger">5</span>
             </a>
         </li>
         <li class="nav-item dropdown">
@@ -54,7 +53,6 @@
                 </div>
                 <a class="dropdown-item" href="#">
                     <i class="fa fa-envelope-o"></i> Messages
-                    <span class="badge badge-success">42</span>
                 </a>
                 <div class="dropdown-header text-center">
                     <strong>Settings</strong>

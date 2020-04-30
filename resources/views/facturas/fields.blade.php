@@ -22,6 +22,11 @@
     {!! Form::text('observation', null, ['class' => 'form-control']) !!}
 </div>
 
+<div class="form-group col-sm-6">
+    {!! Form::label('services_id', 'Services:') !!}
+    {!! Form::select('services_id',$datos['services'], null, ['class' => 'form-control chosen-select']) !!}
+</div>
+
 <!-- Submit Field -->
 <div class="form-group col-sm-12">
     {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
