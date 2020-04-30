@@ -6,20 +6,20 @@
 
 <!-- Person Id Field -->
 <div class="form-group">
-    {!! Form::label('person_id', 'Person Id:') !!}
-    <p>{{ $factura->person_id }}</p>
+    {!! Form::label('person_id', 'Identificacion:') !!}
+    <p>{{ $factura->person-> Identification }}</p>
 </div>
 
 <!-- Car Id Field -->
 <div class="form-group">
-    {!! Form::label('car_id', 'Car Id:') !!}
-    <p>{{ $factura->car_id }}</p>
+    {!! Form::label('car_id', 'Placa:') !!}
+    <p>{{ $factura->car->placa }}</p>
 </div>
 
 <!-- Status Id Field -->
 <div class="form-group">
-    {!! Form::label('status_id', 'Status Id:') !!}
-    <p>{{ $factura->status_id }}</p>
+    {!! Form::label('status_id', 'Status:') !!}
+    <p>{{ $factura->status-> Status }}</p>
 </div>
 
 <!-- Observation Field -->

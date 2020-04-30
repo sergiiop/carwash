@@ -13,13 +13,13 @@
 <!-- Type Services Id Field -->
 <div class="form-group">
     {!! Form::label('type_services_id', 'Type Services Id:') !!}
-    <p>{{ $services->type_services_id }}</p>
+    <p>{{ $services->tiposervice->description }}</p>
 </div>
 
 <!-- Status Id Field -->
 <div class="form-group">
     {!! Form::label('status_id', 'Status Id:') !!}
-    <p>{{ $services->status_id }}</p>
+    <p>{{ $services->status-> status }}</p>
 </div>
 
 <!-- Created At Field -->

@@ -6,26 +6,14 @@
 
 <!-- Factura Id Field -->
 <div class="form-group">
-    {!! Form::label('factura_id', 'Factura Id:') !!}
+    {!! Form::label('factura_id', 'Numero de Factura') !!}
     <p>{{ $detalleFactura->factura_id }}</p>
 </div>
 
 <!-- Services Id Field -->
 <div class="form-group">
-    {!! Form::label('services_id', 'Services Id:') !!}
-    <p>{{ $detalleFactura->services_id }}</p>
-</div>
-
-<!-- Cantidad Field -->
-<div class="form-group">
-    {!! Form::label('cantidad', 'Cantidad:') !!}
-    <p>{{ $detalleFactura->cantidad }}</p>
-</div>
-
-<!-- Valor Field -->
-<div class="form-group">
-    {!! Form::label('valor', 'Valor:') !!}
-    <p>{{ $detalleFactura->valor }}</p>
+    {!! Form::label('services_id', 'Services:') !!}
+    <p>{{ $detalleFactura->services->description }}</p>
 </div>
 
 <!-- Created At Field -->

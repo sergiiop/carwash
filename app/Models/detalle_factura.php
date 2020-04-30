@@ -25,8 +25,6 @@ class detalle_factura extends Model
     public $fillable = [
         'factura_id',
         'services_id',
-        'cantidad',
-        'valor'
     ];
 
     /**
@@ -38,8 +36,6 @@ class detalle_factura extends Model
         'id' => 'integer',
         'factura_id' => 'integer',
         'services_id' => 'integer',
-        'cantidad' => 'integer',
-        'valor' => 'integer'
     ];
 
     /**
@@ -51,5 +47,13 @@ class detalle_factura extends Model
         
     ];
 
-    
+    public function factura()
+    {
+        return $this->belongsTo('App\Models\factura','factura_id');
+    }
+    public function services()
+    {
+        return $this->belongsTo('App\Models\services','services_id');
+    }
+
 }

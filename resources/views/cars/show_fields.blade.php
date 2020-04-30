@@ -24,14 +24,14 @@
 
 <!-- Brand Id Field -->
 <div class="form-group">
-    {!! Form::label('brand_id', 'Brand Id:') !!}
-    <p>{{ $car->brand_id }}</p>
+    {!! Form::label('brand_id', 'Marca:') !!}
+    <p>{{ $car->marca->descripcion }}</p>
 </div>
 
 <!-- Person Id Field -->
 <div class="form-group">
     {!! Form::label('person_id', 'Propietario:') !!}
-    <p>{{ $datos['car'][0]->name }} {{ $datos['car'][0]->last_name }} {{ $datos['car'][0]->Identification }}</p>
+    <p>{{ $car->persona->Identification }}</p>
 </div>
 
 <!-- Created At Field -->

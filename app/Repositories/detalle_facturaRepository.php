@@ -19,8 +19,6 @@ class detalle_facturaRepository extends BaseRepository
     protected $fieldSearchable = [
         'factura_id',
         'services_id',
-        'cantidad',
-        'valor'
     ];
 
     /**

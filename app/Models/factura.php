@@ -64,5 +64,8 @@ class factura extends Model
     {
         return $this->belongsTo('App\Models\Invoice_Status','status_id');
     }
-    
+    public function detalle()
+    {
+        return $this->hasMany('App\Models\detalle_factura');
+    }
 }

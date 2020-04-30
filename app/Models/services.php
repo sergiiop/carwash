@@ -59,5 +59,9 @@ class services extends Model
     {
         return $this->belongsTo('App\Models\Services_Status','status_id');
     }
+    public function detalle()
+    {
+        return $this->hasMany('App\Models\detalle_factura');
+    }
     
 }

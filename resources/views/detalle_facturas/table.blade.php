@@ -2,10 +2,8 @@
     <table class="table table-striped" id="detalleFacturas-table">
         <thead>
             <tr>
-                <th>Factura Id</th>
-        <th>Services Id</th>
-        <th>Cantidad</th>
-        <th>Valor</th>
+                <th>Numero de Factura</th>
+        <th>Services</th>
                 <th colspan="3">Action</th>
             </tr>
         </thead>
@@ -13,9 +11,7 @@
         @foreach($detalleFacturas as $detalleFactura)
             <tr>
                 <td>{{ $detalleFactura->factura_id }}</td>
-            <td>{{ $detalleFactura->services_id }}</td>
-            <td>{{ $detalleFactura->cantidad }}</td>
-            <td>{{ $detalleFactura->valor }}</td>
+            <td>{{ $detalleFactura->services->description }}</td>
                 <td>
                     {!! Form::open(['route' => ['detalleFacturas.destroy', $detalleFactura->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

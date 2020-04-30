@@ -1,25 +1,13 @@
 <!-- Factura Id Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('factura_id', 'Factura Id:') !!}
-    {!! Form::text('factura_id', null, ['class' => 'form-control']) !!}
+    {!! Form::label('factura_id', '# Factura:') !!}
+    {!! Form::select('factura_id',$datos['factura'], null, ['class' => 'form-control chosen-select']) !!}
 </div>
 
 <!-- Services Id Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('services_id', 'Services Id:') !!}
-    {!! Form::text('services_id', null, ['class' => 'form-control']) !!}
-</div>
-
-<!-- Cantidad Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('cantidad', 'Cantidad:') !!}
-    {!! Form::text('cantidad', null, ['class' => 'form-control']) !!}
-</div>
-
-<!-- Valor Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('valor', 'Valor:') !!}
-    {!! Form::text('valor', null, ['class' => 'form-control']) !!}
+    {!! Form::label('services_id', 'Services:') !!}
+    {!! Form::select('services_id',$datos['service'], null, ['class' => 'form-control chosen-select']) !!}
 </div>
 
 <!-- Submit Field -->

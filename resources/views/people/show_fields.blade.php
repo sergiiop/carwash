@@ -25,7 +25,7 @@
 <!-- Type Id Field -->
 <div class="form-group">
     {!! Form::label('type_id', 'Tipo Identificacion Id:') !!}
-    <p>{{ $people->type_id }}</p>
+    <p>{{ $people->type->description }}</p>
 </div>
 
 <!-- Date Birth Field -->

@@ -86,7 +86,7 @@ class facturaController extends AppBaseController
 
             return redirect(route('facturas.index'));
         }
-
+        
         return view('facturas.show')->with('factura', $factura);
     }
 
