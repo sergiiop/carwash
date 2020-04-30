@@ -2,9 +2,9 @@
     <table class="table table-striped" id="facturas-table">
         <thead>
             <tr>
-                <th>Person Id</th>
-        <th>Car Id</th>
-        <th>Status Id</th>
+                <th>Identificacion</th>
+        <th>Matricula</th>
+        <th>Status</th>
         <th>Observation</th>
                 <th colspan="3">Action</th>
             </tr>
@@ -12,9 +12,9 @@
         <tbody>
         @foreach($facturas as $factura)
             <tr>
-                <td>{{ $factura->person_id }}</td>
-            <td>{{ $factura->car_id }}</td>
-            <td>{{ $factura->status_id }}</td>
+                <td>{{ $factura->person-> Identification}}</td>
+            <td>{{ $factura->car->placa }}</td>
+            <td>{{ $factura->status-> Status}}</td>
             <td>{{ $factura->observation }}</td>
                 <td>
                     {!! Form::open(['route' => ['facturas.destroy', $factura->id], 'method' => 'delete']) !!}

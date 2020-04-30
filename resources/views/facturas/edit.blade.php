@@ -18,7 +18,7 @@
                               <strong>Edit Factura</strong>
                           </div>
                           <div class="card-body">
-                              {!! Form::model($factura, ['route' => ['facturas.update', $factura->id], 'method' => 'patch']) !!}
+                              {!! Form::model($datos['factura'], ['route' => ['facturas.update', $datos['factura']->id], 'method' => 'patch']) !!}
 
                               @include('facturas.fields')
 

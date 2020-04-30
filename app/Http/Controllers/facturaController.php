@@ -7,6 +7,9 @@ use App\Http\Requests\UpdatefacturaRequest;
 use App\Repositories\facturaRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
+use App\Models\car;
+use App\Models\people;
+use App\Models\Invoice_Status;
 use Flash;
 use Response;
 
@@ -42,7 +45,11 @@ class facturaController extends AppBaseController
      */
     public function create()
     {
-        return view('facturas.create');
+        $persona = people::pluck('Identification','id');
+        $car = car::pluck('placa','id');
+        $status = Invoice_Status::pluck('Status','id');
+        $datos = ['persona' => $persona,'car'=>$car,'status'=>$status];
+        return view('facturas.create')->with('datos', $datos);
     }
 
     /**
@@ -99,8 +106,12 @@ class facturaController extends AppBaseController
 
             return redirect(route('facturas.index'));
         }
+        $person = people::pluck('Identification','id');
+        $c = car::pluck('placa','id');
+        $sts = Invoice_Status::pluck('Status','id');
+        $datos = ['persona' => $person,'car'=>$c,'status'=>$sts, 'factura' => $factura];
 
-        return view('facturas.edit')->with('factura', $factura);
+        return view('facturas.edit')->with('datos', $datos);
     }
 
     /**

@@ -63,4 +63,9 @@ class car extends Model
     {
         return $this->belongsTo('App\Models\people','person_id');
     }
+    
+    public function factura()
+    {
+        return $this->hasMany('App\Models\factura');
+    }
 }

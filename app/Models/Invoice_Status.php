@@ -42,5 +42,10 @@ class Invoice_Status extends Model
         
     ];
 
+    public function factura()
+    {
+        return $this->hasMany('App\Models\factura');
+    }
+
     
 }

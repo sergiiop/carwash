@@ -13,8 +13,8 @@
         @foreach($services as $services)
             <tr>
                 <td>{{ $services->description }}</td>
-            <td>{{ $services->type_services_id }}</td>
-            <td>{{ $services->status_id }}</td>
+            <td>{{ $services->tiposervice->description }}</td>
+            <td>{{ $services->status-> status}}</td>
             <td>{{ $services->price }}</td>
                 <td>
                     {!! Form::open(['route' => ['services.destroy', $services->id], 'method' => 'delete']) !!}

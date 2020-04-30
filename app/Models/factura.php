@@ -51,5 +51,18 @@ class factura extends Model
         
     ];
 
+    public function person()
+    {
+        return $this->belongsTo('App\Models\people','person_id');
+    }
+    public function car()
+    {
+        return $this->belongsTo('App\Models\car','car_id');
+    }
+
+    public function status()
+    {
+        return $this->belongsTo('App\Models\Invoice_Status','status_id');
+    }
     
 }

@@ -69,6 +69,10 @@ class people extends Model
     {
         return $this->hasMany('App\Models\cars');
     }
-
+    
+    public function factura()
+    {
+        return $this->hasMany('App\Models\factura');
+    }
     
 }
