@@ -56,3 +56,11 @@ Route::resource('cars', 'carController');
 Route::resource('facturas', 'facturaController');
 
 Route::resource('services', 'servicesController');
+
+Gravatar::get('email@example.com');
+
+Gravatar::fallback('http://urlto.example.com/avatar.jpg')->get('email@example.com');
+
+Gravatar::exists('email@example.com');
+
+Route::get('/usuarios', 'UserController@index');

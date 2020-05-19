@@ -2,14 +2,14 @@
     <table class="table table-striped" id="people-table">
         <thead>
             <tr>
-                <th>Name</th>
-        <th>Last Name</th>
-        <th>Identification</th>
-        <th>Tipo de Identificacion</th>
-        <th>Date Birth</th>
-        <th>Phone</th>
-        <th>Direccion</th>
-                <th colspan="3">Action</th>
+            <th>Name</th>
+            <th>Last Name</th>
+            <th>Identification</th>
+            <th>Tipo de Identificacion</th>
+            <th>Date Birth</th>
+            <th>Phone</th>
+            <th>Direccion</th>
+            <th>Action</th>
             </tr>
         </thead>
         <tbody>

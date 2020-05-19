@@ -176,7 +176,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         \InfyOm\Generator\InfyOmGeneratorServiceProvider::class,
         \InfyOm\CoreUITemplates\CoreUITemplatesServiceProvider::class,
-        \InfyOm\GeneratorBuilder\GeneratorBuilderServiceProvider::class, 
+        \InfyOm\GeneratorBuilder\GeneratorBuilderServiceProvider::class,
+        Creativeorange\Gravatar\GravatarServiceProvider::class,
 
     ],
 
@@ -232,6 +233,7 @@ return [
         'Form'      => Collective\Html\FormFacade::class,
         'Html'      => Collective\Html\HtmlFacade::class,
         'Flash'     => Laracasts\Flash\Flash::class,
+        'Gravatar'  => Creativeorange\Gravatar\Facades\Gravatar::class,
 
     ],
 

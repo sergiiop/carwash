@@ -7,7 +7,7 @@
         <th>Color</th>
         <th>Marca</th>
         <th>Dueño</th>
-                <th colspan="3">Action</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>

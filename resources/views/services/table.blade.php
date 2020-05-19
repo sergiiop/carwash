@@ -6,7 +6,7 @@
         <th>Type Service</th>
         <th>Status</th>
         <th>Precio</th>
-                <th colspan="3">Action</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>

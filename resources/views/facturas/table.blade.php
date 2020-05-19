@@ -7,7 +7,7 @@
         <th>Status</th>
         <th>Observation</th>
         <th>Services</th>
-                <th colspan="3">Action</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
